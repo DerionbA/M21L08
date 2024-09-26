@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <img src="imag/Acer_Wallpaper_02_3840x2400.jpg" alt="" class="myslide" style="height: 500px;">
+        <img src="imag/Acer_Wallpaper_03_3840x2400.jpg" alt="" class="myslide" style="height: 500px;">
+        <img src="imag/Acer_Wallpaper_04_3840x2400.jpg" alt="" class="myslide" style="height: 500px;">
+    </section>
+    <script>
+        var myindex = 0;
+        carousel();
+
+         function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslide");
+            for (i = 0; i < x.length; i++ ) {
+                x[i].style.display = "none";
+            }
+            myindex++;
+            if (myindex > x.length) {myindex = 1}
+            x[myindex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+         }
+    </script>
+</body>
+</html>
